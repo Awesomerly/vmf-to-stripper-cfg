@@ -361,14 +361,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "the_mapthing"
-version = "0.1.0"
-dependencies = [
- "clap",
- "vmf-forge",
-]
-
-[[package]]
 name = "thiserror"
 version = "2.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -431,6 +423,14 @@ dependencies = [
  "pest_generator",
  "serde",
  "serde_json",
+]
+
+[[package]]
+name = "vmf_to_stripper"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "vmf-forge",
 ]
 
 [[package]]
