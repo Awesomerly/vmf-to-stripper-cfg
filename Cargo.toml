@@ -1,5 +1,5 @@
 [package]
-name = "the_mapthing"
+name = "vmf_to_stripper"
 version = "0.1.0"
 edition = "2024"
 
