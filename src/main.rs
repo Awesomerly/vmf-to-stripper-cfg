@@ -162,7 +162,7 @@ fn main() -> Result<(), VmfError> {
     let old_vmf = MyVmfWrapper::new(cli.origin_path);
     let new_vmf = MyVmfWrapper::new(cli.mod_path);
 
-    println!("{:#?}", new_vmf.vmf.visgroups);
+    // println!("{:#?}", new_vmf.vmf.visgroups);
 
     // for e in old_vmf.vmf.entities.iter() {
     //     if e.connections != None {
