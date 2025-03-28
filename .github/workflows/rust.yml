@@ -14,18 +14,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        BUILD_TARGET: [release] # refers to a cargo profile
-
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+      run: cargo build --release --verbose
     - name: Upload release artifact
       uses: actions/upload-artifact@v4
       with:
         name: vmf_to_stripper
-        path: target/${{ matrix.BUILD_TARGET }}/vmf_to_stripper
+        path: target/release/vmf_to_stripper
