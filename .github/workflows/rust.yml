@@ -22,4 +22,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: vmf_to_stripper
-        path: target/release/vmf_to_stripper
+        path: |
+          LICENSE
+          README.md
+          target/release/vmf_to_stripper
