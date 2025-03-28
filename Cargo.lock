@@ -412,9 +412,9 @@ checksum = "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
 
 [[package]]
 name = "vmf-forge"
-version = "0.3.0"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "654fd3367490502315243b0d2a7ef65c687c3ecfb796c533d49066722ac51cce"
+checksum = "74cbd8ae7a5bbdf83249253d476ae4a2deaff4c50725ef2ac89bb4cd8bbec2d4"
 dependencies = [
  "derive_more",
  "indexmap",
