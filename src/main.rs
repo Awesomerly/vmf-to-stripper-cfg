@@ -3,8 +3,7 @@ use std::path::PathBuf;
 use std::{collections::HashSet, fs::File};
 
 use clap::Parser;
-// use vbsp;
-use vmf_forge::{Entity, VmfError, VmfFile};
+use vmf_forge::prelude::*;
 
 const ABOUT: &str = "Diffs VMFs and outputs a stripper config";
 
@@ -31,7 +30,6 @@ impl MyVmfWrapper {
         let id_set = vmf.entities.iter().map(|e| e.id()).collect();
         let id_map = vmf
             .entities
-            .vec
             .iter()
             .enumerate()
             .map(|(idx, e)| (e.id(), idx))
@@ -46,7 +44,7 @@ impl MyVmfWrapper {
     fn find_entity_by_id(&self, id: &u64) -> Option<&Entity> {
         if self.id_map.contains_key(id) {
             let idx = self.id_map.get(id).unwrap();
-            return Some(&self.vmf.entities.vec[*idx]);
+            return Some(&self.vmf.entities[*idx]);
         } else {
             None
         }
