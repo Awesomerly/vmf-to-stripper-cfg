@@ -2,7 +2,15 @@
 name = "vmf_to_stripper"
 version = "0.1.1"
 edition = "2024"
+description = "Diff two .vmf files and generate a stripper config. Helpful for Source Engine server admins :)"
+repository = "https://github.com/Awesomerly/vmf-to-stripper-cfg"
+license = "MIT"
 
 [dependencies]
 clap = { version = "4.5.32", features = ["derive"] }
 vmf-forge = "0.4.0"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
