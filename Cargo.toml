@@ -1,6 +1,6 @@
 [package]
 name = "vmf_to_stripper"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "Diff two .vmf files and generate a stripper config. Helpful for Source Engine server admins :)"
 repository = "https://github.com/Awesomerly/vmf-to-stripper-cfg"
