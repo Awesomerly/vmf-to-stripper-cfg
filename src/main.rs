@@ -83,14 +83,9 @@ fn create_filter_string(entity: &Entity) -> String {
         &entity.key_values.get("classname").unwrap()
     ));
 
-    if entity.key_values.get("origin").is_none() {
-        println!("{:#?}", entity)
+    if let Some(origin_val) = &entity.key_values.get("origin") {
+        output.push_str(&format!("\t\t\"{}\" \"{}\"\n", "origin", origin_val));
     }
-    output.push_str(&format!(
-        "\t\"{}\" \"{}\"\n",
-        "origin",
-        &entity.key_values.get("origin").unwrap()
-    ));
 
     output.push_str("}\n");
     output
