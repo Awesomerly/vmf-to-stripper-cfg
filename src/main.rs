@@ -114,11 +114,9 @@ fn create_modify_string(
         &entity.key_values.get("classname").unwrap()
     ));
 
-    output.push_str(&format!(
-        "\t\t\"{}\" \"{}\"\n",
-        "origin",
-        &entity.key_values.get("origin").unwrap()
-    ));
+    if let Some(origin_val) = &entity.key_values.get("origin") {
+        output.push_str(&format!("\t\t\"{}\" \"{}\"\n", "origin", origin_val));
+    }
 
     output.push_str("\t}\n");
 
